@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" media="screen" href="css/selectReorder.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="css/ui-lightness/jquery-ui-1.10.3.custom.min.css" />
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/jquery.selectReorder.js"></script>
+
+</head>
+<body>
+<form>
+  <fieldset>
+    <select name="selectto" id="select-to" multiple size="5">
+      <option value="5">Pos 1 Item 5</option>
+      <option value="6">Pos 2 Item 6</option>
+      <option value="7">Pos 3 Item 7</option>
+    </select>
+  </fieldset>
+</form>
+</body>
+<script type="text/javascript">
+	$('#select-to').selectReorder({labelUp: "arriba", labelDown: "abajo", jQueryUI: false});
+</script>
+</html>
