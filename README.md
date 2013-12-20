@@ -42,13 +42,13 @@ This will add the following html to the page:
 ```
 Available options:
 
-```
-labelbtnUp - Value or label of the Up button (default: "Up")
-labelbtnDown - Value or label of the Down button (default: "Down")
-selectPosition - css positioning of the multiple select (default: "relative") 
-selectFloat - float of the multiple select (default: left)
-jQueryUI - Boolean that indicates if you would like to use jQuery UI button styling. (default: false)
-```
+|Option          |Default Value|Description								  |
+|----------------|:-----------:|--------------------------------------------------------------------------|
+|labelbtnUp      |Up           |Value or label of the Up button. 					  |
+|labelbtnDown    |Down         |Value or label of the Down button. 					  |
+|selectPosition  |relative     |Css positioning of the multiple select. 				  |  
+|selectFloat     |left         |Float of the multiple select.                                             |   
+|jQueryUI        |false        |Boolean that indicates if you would like to use jQuery UI button styling. |
 
 If you want to initialize with options, for example:
 
