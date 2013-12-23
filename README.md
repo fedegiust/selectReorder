@@ -3,6 +3,8 @@ selectReorder
 
 This plugin makes it easy to have an option to move option elements around inside an html multiple select.
 
+Please note that the release is still on beta. It hasn't been fully tested across browsers, and there are some layout fixes to be made and more settings to be added.
+
 Requirements:
 
 - jQuery library
