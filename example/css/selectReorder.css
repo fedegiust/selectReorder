@@ -1,5 +1,4 @@
-	.selectReorder, #btn-container, #btn-up, #btn-down{
-		font-family: Arial, Verdana, Helvetica, sans-serif;
+	.selectReorder, .selectReorder-btn-container, .selectReorder-btn-up, .selectReorder-btn-down{
 		font-size: 0.75em;
 		color: #333;
 		font-style: normal;
@@ -7,14 +6,14 @@
 		line-height: normal;
 	}
 
-	#btn-container{
+	.selectReorder-btn-container{
 		display: inline-block;
 		position: relative;
 		float: left;
 		width: 70px;
 		text-align: center;
 	}
-	#btn-up, #btn-down{
+	.selectReorder-btn-up, .selectReorder-btn-down{
 		width: 100%;
 		padding: 8px 8px;
 		border: none;
@@ -38,11 +37,11 @@
 		border-color: rgba(8, 22, 37, 0.12) rgba(8, 22, 37, 0.14) rgba(8, 22, 37, 0.16);
 		padding: 0.5em 0 0.5em 0;
 	}
-	#selectReorder-container{
+	.selectReorder-container{
 		display: inline-block;
 		margin: 1em;
 	}
-	#selectReorder-container select{
+	.selectReorder-container select{
 		margin-right: 1em;
 		margin-left: 1em;
 	}

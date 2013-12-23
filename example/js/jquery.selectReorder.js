@@ -13,23 +13,25 @@ $.fn.selectReorder = function(options) {
         labelbtnUp: "Up",
         labelbtnDown: "Down",
         btnPosition: "right",
+        wrapInDiv: true,
         jQueryUI: false
     }, options );
     
-    $(this).wrap('<div id="selectReorder-container"></div>');
+    if( settings.wrapInDiv ){
+        $(this).wrap('<div id="' + element + '-selectReorder-container" class="selectReorder-container"></div>');
+    }
     
     $(this).addClass('selectReorder');
 
     if( settings.btnPosition === 'right' || settings.btnPosition === null ){
-        $(this).after('<div id="btn-container"><input type="button" id="btn-up" value="' + settings.labelUp + '" /><br /><input type="button" id="btn-down" value="' + settings.labelDown + '" /></div>');
+        $(this).after('<div id="' + element + '-btn-container" class="selectReorder-btn-container"><input type="button" id="btn-up" class="selectReorder-btn-up" value="' + settings.labelbtnUp + '" /><br /><input type="button" id="btn-down" class="selectReorder-btn-down" value="' + settings.labelbtnDown + '" /></div>');
     }else if( settings.btnPosition === 'left' ){
-        $(this).before('<div id="btn-container"><input type="button" id="btn-up" value="' + settings.labelUp + '" /><br /><input type="button" id="btn-down" value="' + settings.labelDown + '" /></div>');
+        $(this).before('<div id="' + element + '-btn-container" class="selectReorder-btn-container"><input type="button" id="btn-up" class="selectReorder-btn-up" value="' + settings.labelbtnUp + '" /><br /><input type="button" id="btn-down" class="selectReorder-btn-down" value="' + settings.labelbtnDown + '" /></div>');
     }
 
 	if(settings.jQueryUI){
-		$( "input" ).button();
+        $('#' + element + '-btn-container #btn-up, #' + element + '-btn-container #btn-down').button();
 	}
-
 
     $('#btn-up').bind('click', function() {
         $('#' + element + ' option:selected').each( function() {
