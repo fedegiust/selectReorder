@@ -1,3 +1,10 @@
+/*
+* jQuery selectReorder
+* By: Federico Giust
+* Version 0.1
+* 
+* Copyright 2013 Federico Giust
+*/
 $.fn.selectReorder = function(options) {
     element = $(this).attr('id');
     
@@ -5,19 +12,24 @@ $.fn.selectReorder = function(options) {
         // These are the defaults.
         labelbtnUp: "Up",
         labelbtnDown: "Down",
-        selectPosition: "relative",
-        selectFloat: "left",
+        btnPosition: "right",
         jQueryUI: false
     }, options );
     
-	$(this).after('<div id="btn-container"><input type="button" id="btn-up" value="' + settings.labelUp + '" /><br /><input type="button" id="btn-down" value="' + settings.labelDown + '" /></div>');
+    $(this).wrap('<div id="selectReorder-container"></div>');
+    
+    $(this).addClass('selectReorder');
 
-	$(this).css('position', settings.selectPosition);
-	$(this).css('float', settings.selectFloat);
+    if( settings.btnPosition === 'right' || settings.btnPosition === null ){
+        $(this).after('<div id="btn-container"><input type="button" id="btn-up" value="' + settings.labelUp + '" /><br /><input type="button" id="btn-down" value="' + settings.labelDown + '" /></div>');
+    }else if( settings.btnPosition === 'left' ){
+        $(this).before('<div id="btn-container"><input type="button" id="btn-up" value="' + settings.labelUp + '" /><br /><input type="button" id="btn-down" value="' + settings.labelDown + '" /></div>');
+    }
 
 	if(settings.jQueryUI){
 		$( "input" ).button();
 	}
+
 
     $('#btn-up').bind('click', function() {
         $('#' + element + ' option:selected').each( function() {
