@@ -58,32 +58,6 @@
 <div id="content">
 	<h2>selectReorder</h2>
 	<hr>
-	<h3>Example 1 - With default options</h3>
-
-	<pre><code>$('#example_1').selectReorder();</code></pre>
-    <select name="selectto" id="example_1" multiple size="5">
-      <option value="1">Pos 1 Item 1</option>
-      <option value="2">Pos 2 Item 2</option>
-      <option value="3">Pos 3 Item 3</option>
-    </select>
-
-	<h3>Example 2 - Custom labels</h3>
-
-	<pre><code>$('#example_2').selectReorder({labelbtnUp: "Arriba", labelbtnDown: "Abajo"});</code></pre>
-    <select name="selectto" id="example_2" multiple size="5">
-      <option value="1">Pos 1 Item 1</option>
-      <option value="2">Pos 2 Item 2</option>
-      <option value="3">Pos 3 Item 3</option>
-    </select>
-
-    <h3>Example 3 - jQuery UI</h3>
-
-	<pre><code>$('#example_3').selectReorder({jQueryUI: true});</code></pre>
-    <select name="selectto" id="example_3" multiple size="5">
-      <option value="1">Pos 1 Item 1</option>
-      <option value="2">Pos 2 Item 2</option>
-      <option value="3">Pos 3 Item 3</option>
-    </select>
 
     <h3>Example 4 - Buttons on the left hand side</h3>
 
@@ -94,21 +68,9 @@
       <option value="3">Pos 3 Item 3</option>
     </select>
 
-    <h3>Example 5 - Don't wrap in div</h3>
-
-	<pre><code>$('#example_5').selectReorder({wrapInDiv: false});</code></pre>
-    <select name="selectto" id="example_5" multiple size="5">
-      <option value="1">Pos 1 Item 1</option>
-      <option value="2">Pos 2 Item 2</option>
-      <option value="3">Pos 3 Item 3</option>
-    </select>	
 </div>
 </body>
 <script type="text/javascript">
-	$('#example_1').selectReorder();
-	$('#example_2').selectReorder({labelbtnUp: "Arriba", labelbtnDown: "Abajo"});
-	$('#example_3').selectReorder({jQueryUI: true});
 	$('#example_4').selectReorder({btnPosition: "left"});
-	$('#example_5').selectReorder({wrapInDiv: false});
 </script>
 </html>
