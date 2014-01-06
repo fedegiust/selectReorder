@@ -6,10 +6,7 @@ This plugin makes it easy to have an option to move option elements around insid
 Please note that the release is still on beta, so there might be some minor bugs.
 
 It has been tested on:
-IE 7, 8 & 9
-Safari 6.1
-FireFox 16
-Chrome 31
+IE 7, 8 & 9 / Safari 6.1 / FireFox 16 / Chrome 31
 
 Requirements:
 
